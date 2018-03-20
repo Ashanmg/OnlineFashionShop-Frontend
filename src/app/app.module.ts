@@ -5,12 +5,14 @@ import { ModalModule, BsDropdownModule, TypeaheadModule, TooltipModule, PopoverM
 
 import { AppComponent } from './app.component';
 import { LoginComponentComponent } from './online-shooping-components/common-component/login-component/login-component.component';
+import { HomeComponent } from './online-shooping-components/home-component/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponentComponent
+    LoginComponentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
