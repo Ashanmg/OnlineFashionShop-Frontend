@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-// import { CarouselModule, CollapseModule, ModalModule, BsDropdownModule, TypeaheadModule, TooltipModule, PopoverModule } from 'ngx-bootstrap';
+import { CarouselModule, CollapseModule, ModalModule, BsDropdownModule, TypeaheadModule, TooltipModule, PopoverModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LoginComponentComponent } from './online-shooping-components/common-component/login-component/login-component.component';
@@ -23,14 +23,14 @@ import { AppRoutingModule } from './ng-modules/app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    // CarouselModule.forRoot(),
-    // CollapseModule.forRoot(),
-    // ModalModule.forRoot(),
-    // BsDropdownModule.forRoot(),
-    // TypeaheadModule.forRoot(),
-    // TooltipModule.forRoot(),
-    // PopoverModule.forRoot()
+    FormsModule,
+    CarouselModule.forRoot(),
+    CollapseModule.forRoot(),
+    ModalModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    TypeaheadModule.forRoot(),
+    TooltipModule.forRoot(),
+    PopoverModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
