@@ -1,5 +1,24 @@
-  /* Make the image fully responsive */
-  .carousel-inner img {
+/* Make the image fully responsive */
+.carousel-inner img {
     width: 100%;
-    height: 100%;
+    height: 500px;
+}
+
+/* Change styles for span and cancel button on screens */
+@media screen and (max-width: 792px) {
+  .carousel-inner img {
+    height: 397px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .carousel-inner img {
+    height: 270px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .carousel-inner img {
+    height: 165px;
+  }
 }

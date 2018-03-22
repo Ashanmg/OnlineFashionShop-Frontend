@@ -8,7 +8,7 @@ import {NavigationStart, Router} from '@angular/router';
 })
 export class AppComponent implements AfterContentInit {
   @ViewChild('loadcontainer', {read: ViewContainerRef}) loadcontainer: ElementRef;
-  currentRoute = '/login';
+  currentRoute = '/home';
 
   /**
    *
