@@ -12,13 +12,15 @@ import { HeaderComponent } from './online-shooping-components/common-component/h
 
 // Routing Module
 import { AppRoutingModule } from './ng-modules/app-routing.module';
+import { RegisterComponentComponent } from './online-shooping-components/common-component/register-component/register-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponentComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterComponentComponent
   ],
   imports: [
     BrowserModule,
