@@ -7,6 +7,7 @@ import { HomeComponent } from '../online-shooping-components/home-component/home
 import { RegisterComponentComponent } from './../online-shooping-components/common-component/register-component/register-component.component';
 import { ProductComponent } from './../online-shooping-components/product-component/product/product.component';
 import { CategoryComponent } from './../online-shooping-components/category-component/category/category.component';
+import { CartComponent } from './../online-shooping-components/cart-component/cart/cart.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'register', component: RegisterComponentComponent},
     { path: 'product', component: ProductComponent},
-    { path: 'categories', component: CategoryComponent}
+    { path: 'categories', component: CategoryComponent},
+    { path: 'cart', component: CartComponent}
 ];
 
 @NgModule({
