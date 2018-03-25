@@ -6,6 +6,7 @@ import { LoginComponentComponent } from '../online-shooping-components/common-co
 import { HomeComponent } from '../online-shooping-components/home-component/home/home.component';
 import { RegisterComponentComponent } from './../online-shooping-components/common-component/register-component/register-component.component';
 import { ProductComponent } from './../online-shooping-components/product-component/product/product.component';
+import { CategoryComponent } from './../online-shooping-components/category-component/category/category.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
     { path: 'login', component: LoginComponentComponent },
     { path: 'home', component: HomeComponent },
     { path: 'register', component: RegisterComponentComponent},
-    { path: 'product', component: ProductComponent}
+    { path: 'product', component: ProductComponent},
+    { path: 'categories', component: CategoryComponent}
 ];
 
 @NgModule({

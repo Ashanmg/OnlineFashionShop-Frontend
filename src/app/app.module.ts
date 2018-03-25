@@ -14,6 +14,7 @@ import { HeaderComponent } from './online-shooping-components/common-component/h
 import { AppRoutingModule } from './ng-modules/app-routing.module';
 import { RegisterComponentComponent } from './online-shooping-components/common-component/register-component/register-component.component';
 import { ProductComponent } from './online-shooping-components/product-component/product/product.component';
+import { CategoryComponent } from './online-shooping-components/category-component/category/category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { ProductComponent } from './online-shooping-components/product-component
     HomeComponent,
     HeaderComponent,
     RegisterComponentComponent,
-    ProductComponent
+    ProductComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
