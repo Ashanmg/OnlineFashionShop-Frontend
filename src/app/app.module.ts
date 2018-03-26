@@ -16,6 +16,7 @@ import { RegisterComponentComponent } from './online-shooping-components/common-
 import { ProductComponent } from './online-shooping-components/product-component/product/product.component';
 import { CategoryComponent } from './online-shooping-components/category-component/category/category.component';
 import { FooterComponent } from './online-shooping-components/common-component/footer/footer.component';
+import { CartComponent } from './online-shooping-components/cart-component/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { FooterComponent } from './online-shooping-components/common-component/f
     RegisterComponentComponent,
     ProductComponent,
     CategoryComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

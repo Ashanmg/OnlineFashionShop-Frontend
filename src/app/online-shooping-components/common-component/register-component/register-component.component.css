@@ -4,3 +4,7 @@
       text-align: right;
     }
   }
+
+  .btn-success {
+    margin-bottom: 15px;
+  }
