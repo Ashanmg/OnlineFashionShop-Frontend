@@ -3,40 +3,39 @@
   <img src="../../../../../assets/images/logo.jpg" width="40px" height="35px">
 
   <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
-   aria-expanded="!navbarCollapsed">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="!navbarCollapsed">
     <span class="navbar-toggler-icon" (click)="navbarCollapsed = !navbarCollapsed"></span>
   </button>
-  
+
   <!-- Links -->
-  <div class="collapse navbar-collapse" [class.collapse] ="navbarCollapsed" id="collapsibleNavbar">
+  <div class="collapse navbar-collapse" [class.collapse]="navbarCollapsed" id="collapsibleNavbar">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a [routerLink]="['/home']">Home</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/home']">Home</a>
       </li>
-      <li class="nav-item">
-          <a [routerLink]="['/categories']">Categories</a>
-        </li>
-      <li class="nav-item">
-        <a [routerLink]="['/product']">Products</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/categories']">Categories</a>
       </li>
-      <li class="nav-item">
-        <a [routerLink]="['/login']">Login</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/product']">Products</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-        <div class="input-group input-group-sm">
-            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
-            <div class="input-group-append">
-                <button type="button" class="btn btn-secondary btn-number">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
+      <div class="input-group input-group-sm">
+        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-secondary btn-number">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
-        <a class="btn btn-success btn-sm ml-3" [routerLink]="['/cart']">
-            <i class="fa fa-shopping-cart"></i> Cart
-            <span class="badge badge-light">3</span>
-        </a>
+      </div>
+      <a class="btn btn-success btn-sm ml-3" [routerLink]="['/cart']">
+        <i class="fa fa-shopping-cart"></i> Cart
+        <span class="badge badge-light">3</span>
+      </a>
     </form>
   </div>
 </nav>
