@@ -1,5 +1,5 @@
 import { NgModule, Component } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterLinkActive, Routes, RouterModule } from '@angular/router';
 
 /* Components */
 import { LoginComponentComponent } from '../online-shooping-components/common-component/login-component/login-component.component';

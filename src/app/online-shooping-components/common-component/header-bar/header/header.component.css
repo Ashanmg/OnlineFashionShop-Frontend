@@ -3,7 +3,31 @@ a {
     color: white;
     padding-right: 5px;
 }
-
+/* change brand logo css*/
 img {
     padding-right: 5px;
 }
+
+/* collape visibility width setup*/
+/* @media only screen and (min-width:675px){
+    .navbar-expand-sm .navbar-toggler {
+        display: none;
+    }
+} */
+
+/* @media only screen and (max-width: 675px) {
+    .navbar-expand-sm .navbar-nav {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .navbar-expand-sm .navbar-collapse {
+        display: -ms-flexbox!important;
+        display: none;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+} */
