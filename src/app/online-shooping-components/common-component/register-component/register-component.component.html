@@ -9,15 +9,24 @@
     </div>
     <div class="row">
       <div class="col-md-3 field-label-responsive">
-        <label for="name">Name</label>
+        <label for="firstname">First Name</label>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem">
-              <i class="fa fa-user"></i>
-            </div>
-            <input type="text" name="name" class="form-control" id="name" placeholder="John Doe" required autofocus>
+            <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Ashan" required autofocus>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 field-label-responsive">
+        <label for="lastname">Last Name</label>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Madushanka" required autofocus>
           </div>
         </div>
       </div>
@@ -29,10 +38,19 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem">
-              <i class="fa fa-at"></i>
-            </div>
             <input type="text" name="email" class="form-control" id="email" placeholder="you@example.com" required autofocus>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 field-label-responsive">
+        <label for="username">User Name</label>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <input type="text" name="username" class="form-control" id="username" placeholder="you@example.com" required autofocus>
           </div>
         </div>
       </div>
@@ -44,9 +62,6 @@
       <div class="col-md-6">
         <div class="form-group has-danger">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem">
-              <i class="fa fa-key"></i>
-            </div>
             <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
           </div>
         </div>
@@ -66,9 +81,6 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem">
-              <i class="fa fa-repeat"></i>
-            </div>
             <input type="password" name="password-confirmation" class="form-control" id="password-confirm" placeholder="Password" required>
           </div>
         </div>
@@ -81,9 +93,6 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem">
-              <i class="fa fa-repeat"></i>
-            </div>
             <input type="number" name="phonenumber" class="form-control" id="phonenumber" placeholder="Phone Number" required>
           </div>
         </div>
@@ -91,30 +100,48 @@
     </div>
     <div class="row">
       <div class="col-md-3 field-label-responsive">
-        <label for="billaddress">Billing Address</label>
+        <label for="billaddress1">Address 01</label>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem">
-              <i class="fa fa-repeat"></i>
-            </div>
-            <textarea type="billaddress" name="billaddress" class="form-control" id="billaddress" placeholder="Billing Address" required></textarea>
+            <input type="text" name="billaddress1" class="form-control" id="billaddress1" placeholder="No 13/47, Morawagawatta" required>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3 field-label-responsive">
-        <label for="shippingaddress">Shipping Address</label>
+        <label for="billaddress2">Address 02</label>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem">
-              <i class="fa fa-repeat"></i>
-            </div>
-            <textarea type="textaria" name="shippingaddress" class="form-control" id="shippingaddress" placeholder="Phone Number" required></textarea>
+            <input type="text" name="billaddress2" class="form-control" id="billaddress2" placeholder="Sitinamaluwa" required>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 field-label-responsive">
+        <label for="city">City</label>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <input type="text" name="city" class="form-control" id="city" placeholder="Beliatta" required>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 field-label-responsive">
+        <label for="postalcode">Zip Postal Code</label>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <input type="text" name="postalcode" class="form-control" id="postalcode" placeholder="82400" required>
           </div>
         </div>
       </div>

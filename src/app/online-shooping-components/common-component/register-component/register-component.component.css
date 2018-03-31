@@ -8,3 +8,9 @@
   .btn-success {
     margin-bottom: 15px;
   }
+
+/* Override register page header css */
+h2 {
+  color: white;
+  text-align: center;
+}
