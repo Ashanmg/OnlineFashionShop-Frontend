@@ -17,6 +17,7 @@ import { ProductComponent } from './online-shooping-components/product-component
 import { CategoryComponent } from './online-shooping-components/category-component/category/category.component';
 import { FooterComponent } from './online-shooping-components/common-component/footer/footer.component';
 import { CartComponent } from './online-shooping-components/cart-component/cart/cart.component';
+import { BreadcrumbsComponent } from './online-shooping-components/common-component/breadcrumbs/breadcrumbs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { CartComponent } from './online-shooping-components/cart-component/cart/
     ProductComponent,
     CategoryComponent,
     FooterComponent,
-    CartComponent
+    CartComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule,
