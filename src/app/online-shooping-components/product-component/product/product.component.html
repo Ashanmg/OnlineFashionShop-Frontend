@@ -4,19 +4,10 @@
         <p class="lead text-muted mb-0">New up coming brand with lowest cost. Materials are soft and easy to wear nothing like this...</p>
     </div>
 </section>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
-                    <li class="breadcrumb-item"><a [routerLink]="['/categories']">Category</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Product</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-</div>
+<app-breadcrumbs [breadcrumbItems] = "[{name:'Home', url:'/home'},
+                                    {name:'Category', url:'/categories'},
+                                    {name:'Product',url:'/product'}]"> 
+</app-breadcrumbs>
 <div class="container">
     <div class="row">
         <!-- Image -->

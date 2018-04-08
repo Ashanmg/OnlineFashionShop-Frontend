@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                  <!-- <li class="breadcrumb-item"><a [routerLink]="['/home']" te>{}</a></li>
+                  <li class="breadcrumb-item"><a [routerLink]="['/categories']">Category</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Product</li> -->
+                  <li class="breadcrumb-item" *ngFor="let item of breadcrumbItems; let last = last;" [ngClass]="{'active':last === true}">
+                    <a *ngIf="!item.queryParams; else normalLink" [routerLink]="item.url" [queryParams]="{organizationId: queryParameters['organizationId']}">{{item.name}}</a>
+                    <ng-template #normalLink><a *ngIf="item.queryParams" [routerLink]="item.url" [queryParams]="item.queryParams">{{item.name}}</a></ng-template>
+                  </li>
+              </ol>
+          </nav>
+      </div>
+  </div>
+</div>
