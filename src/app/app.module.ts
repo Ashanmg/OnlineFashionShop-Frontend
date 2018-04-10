@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { LocalStorageModule } from 'angular-2-local-storage';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { CarouselModule, CollapseModule, ModalModule, BsDropdownModule, TypeaheadModule, TooltipModule, PopoverModule } from 'ngx-bootstrap';
 
@@ -18,6 +22,7 @@ import { CategoryComponent } from './online-shooping-components/category-compone
 import { FooterComponent } from './online-shooping-components/common-component/footer/footer.component';
 import { CartComponent } from './online-shooping-components/cart-component/cart/cart.component';
 import { BreadcrumbsComponent } from './online-shooping-components/common-component/breadcrumbs/breadcrumbs.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +46,13 @@ import { BreadcrumbsComponent } from './online-shooping-components/common-compon
     BsDropdownModule.forRoot(),
     TypeaheadModule.forRoot(),
     TooltipModule.forRoot(),
-    PopoverModule.forRoot()
+    PopoverModule.forRoot(),
+    LocalStorageModule.withConfig({
+      prefix: 'my-app',
+      storageType: 'localStorage'
+    }),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
