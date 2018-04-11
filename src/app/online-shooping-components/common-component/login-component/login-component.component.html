@@ -24,7 +24,7 @@
             </div>
         </div>
         <button type="submit">Login</button>
-        <input type="checkbox" checked="checked"> Remember me
+        <input type="checkbox" [(ngModel)]="_user.RememberMe" name="remember"> Remember me
         <div style="background-color:#f1f1f1">
             <button type="button" class="cancelbtn" (click)="userRegister()">Register</button>
             <span class="psw">Forgot
