@@ -1,3 +1,4 @@
+import { TokenGenrator } from './serivces/token.generator';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +23,8 @@ import { CategoryComponent } from './online-shooping-components/category-compone
 import { FooterComponent } from './online-shooping-components/common-component/footer/footer.component';
 import { CartComponent } from './online-shooping-components/cart-component/cart/cart.component';
 import { BreadcrumbsComponent } from './online-shooping-components/common-component/breadcrumbs/breadcrumbs.component';
+import { UserService } from './serivces/user.service';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,7 @@ import { BreadcrumbsComponent } from './online-shooping-components/common-compon
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
     ModalModule.forRoot(),
@@ -54,7 +58,14 @@ import { BreadcrumbsComponent } from './online-shooping-components/common-compon
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    UserService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenGenrator,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
