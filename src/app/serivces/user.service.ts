@@ -6,7 +6,6 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class UserService {
-    path : 'http://localhost:1862/api/user/login';
     loggedIn : false;
     /**
      */
@@ -17,7 +16,7 @@ export class UserService {
     }
 
     login(userdetails) {
-        return this.http.post(this.path , JSON.stringify(userdetails)).map(response => <any>(<Response>response).json());
+        return this.http.post(environment.apiUrl +"user/login" , userdetails);
     }
     
     saveToken(token) {
@@ -26,11 +25,6 @@ export class UserService {
 
     saveUserDate(userData) {
         // save user details
-    }
-
-    testing() {
-        let path = 'user/test'
-        return this.http.get(environment.apiUrl + path);
     }
     
 }

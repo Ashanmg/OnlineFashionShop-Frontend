@@ -26,17 +26,19 @@ export class LoginComponentComponent implements OnInit {
 
   onSubmitLogin(login  : NgForm) {
     if(login.valid) {
-      let user = {Id: 1, Username:'ashanmg9@gmail.com', Password:'zaq1xsw2!@#$', RememberMe:false}
-      this.userService.testing().subscribe(
+      this.userService.login(this._user).subscribe(
         (data) => {
-          if(data) {
-            this.toastr.success("loggin successfully");
+          console.log(data);
+          debugger;
+          if(data["succeeded"]) {
+            this.toastr.success("Loggin successfully");
+            this.router.navigate(["/home"]);
           }else {
-            this.toastr.error("login failed");
+            this.toastr.error("Your username password are incorrect !");
           }
         }, (err) => {
           console.log(err);
-          this.toastr.error("login failed due to connection failiure");
+          this.toastr.error("Login failed due to connection failiure");
         }
       );
     } else {
