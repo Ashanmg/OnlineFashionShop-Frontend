@@ -29,7 +29,6 @@ export class LoginComponentComponent implements OnInit {
       this.userService.login(this._user).subscribe(
         (data) => {
           console.log(data);
-          debugger;
           if(data["succeeded"]) {
             this.toastr.success("Loggin successfully");
             this.router.navigate(["/home"]);

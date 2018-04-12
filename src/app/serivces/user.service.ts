@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class UserService {
-    loggedIn : false;
+    loggedIn : boolean = false;
     /**
      */
     constructor(private localStorageService : LocalStorageService,
@@ -26,5 +26,32 @@ export class UserService {
     saveUserDate(userData) {
         // save user details
     }
+
+    getLoggedInState() {    
+        const token = this.localStorageService.get('token');
+        console.log(token);
+        if (token) {
+         this.loggedIn = true;
+        } else {
+         this.loggedIn = false;
+        }
+        return this.loggedIn;
+    }
     
+    logout() {
+        this.localStorageService.remove('token');
+        this.localStorageService.remove('tokenLifeTime');
+        this.localStorageService.remove('inactivateTime');
+        this.localStorageService.remove('userdata');
+    
+        const token = this.localStorageService.get('token');
+        if (token) {
+          // token still exist
+         } else {
+          console.log('logged out');
+          this.router.navigate(['login']);
+         }
+    
+        this.loggedIn = false;
+    }
 }

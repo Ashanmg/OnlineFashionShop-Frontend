@@ -1,6 +1,8 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterLinkActive, Routes, RouterModule } from '@angular/router';
 
+import { AuthenticateGuard } from './../guards/authenticate.guard';
+
 /* Components */
 import { LoginComponentComponent } from '../online-shooping-components/common-component/login-component/login-component.component';
 import { HomeComponent } from '../online-shooping-components/home-component/home/home.component';
@@ -17,7 +19,7 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponentComponent},
     { path: 'product', component: ProductComponent},
     { path: 'categories', component: CategoryComponent},
-    { path: 'cart', component: CartComponent}
+    { path: 'cart', component: CartComponent, canActivate : [AuthenticateGuard]}
 ];
 
 @NgModule({
