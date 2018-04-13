@@ -23,6 +23,10 @@ export class UserService {
 
     saveToken(token) {
         // save token to local storage
+        this.loginResource.next(true);
+        this.localStorageService.set('token', token);
+        const datetimeNow: number = new Date().getTime() / 1000 + token['expires_in'];
+        this.localStorageService.set('tokenLifeTime', datetimeNow);
     }
 
     saveUserDate(userData) {
@@ -30,14 +34,11 @@ export class UserService {
     }
 
     getLoggedInState(token) {
-        // const token = this.localStorageService.get('token');
-        console.log(token);
         if (token) {
          this.loginResource.next(true);
         } else {
          this.loginResource.next(false);
         }
-        // return this.loggedIn;
     }
 
     logout() {

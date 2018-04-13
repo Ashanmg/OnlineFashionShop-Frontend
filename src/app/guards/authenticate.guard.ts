@@ -17,8 +17,8 @@ export class AuthenticateGuard implements CanActivate {
 
     canActivate(
     ): Observable<boolean> | Promise<boolean> | boolean {
-        const thisState = false; // this.userService.getLoggedInState();
-
+        let thisState = false; // this.userService.getLoggedInState();
+        this.userService.loggedIn.subscribe(log => thisState = log);
         const datetimeNow: number  = new Date().getTime() / 1000;
 
         if (thisState === false) {

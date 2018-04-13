@@ -33,6 +33,7 @@ export class LoginComponentComponent implements OnInit {
           console.log(data);
           if (data['succeeded']) {
             this.userService.getLoggedInState(true);
+            this.saveToken(data['message']);
             this.toastr.success('Loggin successfully');
             this.router.navigate(['/home']);
           }else {
@@ -53,6 +54,10 @@ export class LoginComponentComponent implements OnInit {
 
   userRegister() {
     this.router.navigate(['/register']);
+  }
+
+  saveToken(token: string) {
+    this.userService.saveToken(token);
   }
 
 }
