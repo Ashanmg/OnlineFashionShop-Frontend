@@ -3,22 +3,24 @@ import { LocalStorageService } from 'angular-2-local-storage';
 import { Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class UserService {
-    loggedIn : boolean = false;
+    loginResource = new BehaviorSubject<boolean>(false);
+    loggedIn = this.loginResource.asObservable();
     /**
      */
-    constructor(private localStorageService : LocalStorageService,
-                private router : Router,
-                private http : HttpClient,
-                private route : ActivatedRoute) {
+    constructor(private localStorageService: LocalStorageService,
+                private router: Router,
+                private http: HttpClient,
+                private route: ActivatedRoute) {
     }
 
     login(userdetails) {
-        return this.http.post(environment.apiUrl +"user/login" , userdetails);
+        return this.http.post(environment.apiUrl + 'user/login' , userdetails);
     }
-    
+
     saveToken(token) {
         // save token to local storage
     }
@@ -27,23 +29,23 @@ export class UserService {
         // save user details
     }
 
-    getLoggedInState() {    
-        const token = this.localStorageService.get('token');
+    getLoggedInState(token) {
+        // const token = this.localStorageService.get('token');
         console.log(token);
         if (token) {
-         this.loggedIn = true;
+         this.loginResource.next(true);
         } else {
-         this.loggedIn = false;
+         this.loginResource.next(false);
         }
-        return this.loggedIn;
+        // return this.loggedIn;
     }
-    
+
     logout() {
         this.localStorageService.remove('token');
         this.localStorageService.remove('tokenLifeTime');
         this.localStorageService.remove('inactivateTime');
         this.localStorageService.remove('userdata');
-    
+
         const token = this.localStorageService.get('token');
         if (token) {
           // token still exist
@@ -51,7 +53,7 @@ export class UserService {
           console.log('logged out');
           this.router.navigate(['login']);
          }
-    
-        this.loggedIn = false;
+
+        // this.loggedIn = false;
     }
 }
