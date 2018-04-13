@@ -1,3 +1,4 @@
+import { UserService } from './../../../../serivces/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   navbarCollapsed = true;
-  constructor() { }
+  loggedIn = false;
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.loggedIn.subscribe(log => this.loggedIn = log);
   }
 
   UserLogin() {
-    console.log("clicked login");
+    console.log('clicked login');
+  }
+
+  IsLoggedIn(event) {
+    this.loggedIn = event;
+    console.log(this.loggedIn);
+  }
+
+  Logout() {
+    console.log('clicked logout');
   }
 }

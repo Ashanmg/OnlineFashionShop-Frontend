@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav (toggled)="IsLoggedIn($event)" class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
   <img src="../../../../../assets/images/logo.jpg" width="40px" height="35px">
 
@@ -19,8 +19,14 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/product']">Products</a>
       </li>
-      <li class="nav-item" routerLinkActive="active">
+      <li *ngIf="!loggedIn" class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+      <li *ngIf="loggedIn" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/myaccount']">MyAccount</a>
+      </li>
+      <li *ngIf="loggedIn" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" (click)="Logout()">Logout</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

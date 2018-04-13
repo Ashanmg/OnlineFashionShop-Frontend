@@ -1,5 +1,5 @@
 export class UserLogin {
-    Username : string;
-    Password : string;
-    RememberMe : boolean;
+    Username: string;
+    Password: string;
+    RememberMe: boolean;
 }

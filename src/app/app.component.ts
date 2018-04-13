@@ -9,7 +9,7 @@ import {NavigationStart, Router} from '@angular/router';
 export class AppComponent implements AfterContentInit {
   @ViewChild('loadcontainer', {read: ViewContainerRef}) loadcontainer: ElementRef;
   currentRoute = '/home';
-
+  loggedIn = false;
   /**
    *
    */
@@ -18,12 +18,17 @@ export class AppComponent implements AfterContentInit {
       if (event instanceof NavigationStart) {
         this.currentRoute = event.url;
       }
-    });   
+    });
   }
 
   ngAfterContentInit() {
-    //this.loadcontainer;
+    // this.loadcontainer;
     // So far nothing to load initially.
     // once we have we idicate that service here
+  }
+
+  IsLoggedIn(event) {
+    this.loggedIn = event;
+    console.log(this.loggedIn);
   }
 }
