@@ -6,6 +6,8 @@ import { AuthenticateGuard } from './../guards/authenticate.guard';
 /* Components */
 import { LoginComponentComponent } from '../online-shooping-components/common-component/login-component/login-component.component';
 import { HomeComponent } from '../online-shooping-components/home-component/home/home.component';
+import { MaintenanceComponent } from './../online-shooping-components/common-component/maintenance/maintenance.component';
+
 // tslint:disable-next-line:max-line-length
 import { RegisterComponentComponent } from './../online-shooping-components/common-component/register-component/register-component.component';
 import { ProductComponent } from './../online-shooping-components/product-component/product/product.component';
@@ -20,7 +22,8 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponentComponent},
     { path: 'product', component: ProductComponent},
     { path: 'categories', component: CategoryComponent},
-    { path: 'cart', component: CartComponent, canActivate : [AuthenticateGuard]}
+    { path: 'cart', component: CartComponent, canActivate : [AuthenticateGuard]},
+    { path: 'myaccount', component: MaintenanceComponent}
 ];
 
 @NgModule({

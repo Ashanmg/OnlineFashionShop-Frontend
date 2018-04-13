@@ -23,10 +23,10 @@
         <a class="nav-link" [routerLink]="['/login']">Login</a>
       </li>
       <li *ngIf="loggedIn" class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['']">MyAccount</a>
+        <a class="nav-link" [routerLink]="['/myaccount']">MyAccount</a>
       </li>
       <li *ngIf="loggedIn" class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['']">Logout</a>
+        <a class="nav-link" (click)="Logout()">Logout</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

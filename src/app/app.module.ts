@@ -29,6 +29,7 @@ import { CategoryComponent } from './online-shooping-components/category-compone
 import { FooterComponent } from './online-shooping-components/common-component/footer/footer.component';
 import { CartComponent } from './online-shooping-components/cart-component/cart/cart.component';
 import { BreadcrumbsComponent } from './online-shooping-components/common-component/breadcrumbs/breadcrumbs.component';
+import { MaintenanceComponent } from './online-shooping-components/common-component/maintenance/maintenance.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { BreadcrumbsComponent } from './online-shooping-components/common-compon
     CategoryComponent,
     FooterComponent,
     CartComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    MaintenanceComponent
   ],
   imports: [
     BrowserModule,

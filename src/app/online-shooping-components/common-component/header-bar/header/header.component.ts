@@ -23,4 +23,8 @@ export class HeaderComponent implements OnInit {
     this.loggedIn = event;
     console.log(this.loggedIn);
   }
+
+  Logout() {
+    console.log('clicked logout');
+  }
 }
