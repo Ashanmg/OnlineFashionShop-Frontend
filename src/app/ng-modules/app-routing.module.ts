@@ -6,6 +6,7 @@ import { AuthenticateGuard } from './../guards/authenticate.guard';
 /* Components */
 import { LoginComponentComponent } from '../online-shooping-components/common-component/login-component/login-component.component';
 import { HomeComponent } from '../online-shooping-components/home-component/home/home.component';
+// tslint:disable-next-line:max-line-length
 import { RegisterComponentComponent } from './../online-shooping-components/common-component/register-component/register-component.component';
 import { ProductComponent } from './../online-shooping-components/product-component/product/product.component';
 import { CategoryComponent } from './../online-shooping-components/category-component/category/category.component';

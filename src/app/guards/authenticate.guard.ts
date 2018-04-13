@@ -9,18 +9,18 @@ export class AuthenticateGuard implements CanActivate {
     /**
      *
      */
-    constructor(private router : Router,
-                private userService : UserService,
-                private localStorageService : LocalStorageService) {
+    constructor(private router: Router,
+                private userService: UserService,
+                private localStorageService: LocalStorageService) {
 
     }
 
     canActivate(
-    ) : Observable<boolean> | Promise<boolean> | boolean {
-        const thisState = this.userService.getLoggedInState();
+    ): Observable<boolean> | Promise<boolean> | boolean {
+        const thisState = false; // this.userService.getLoggedInState();
 
         const datetimeNow: number  = new Date().getTime() / 1000;
-  
+
         if (thisState === false) {
           this.userService.logout();
           return false;
@@ -33,7 +33,6 @@ export class AuthenticateGuard implements CanActivate {
           });
           this.localStorageService.remove('currentUrl');
         }
-  
         return thisState;
     }
 }

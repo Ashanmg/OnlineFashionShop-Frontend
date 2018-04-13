@@ -1,19 +1,19 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import {
     HttpRequest,
     HttpHandler,
     HttpEvent,
     HttpInterceptor
   } from '@angular/common/http';
-import { LocalStorageService } from "angular-2-local-storage"
-import { Observable } from "rxjs/Observable";
+import { LocalStorageService } from 'angular-2-local-storage';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class TokenGenrator implements HttpInterceptor {
     /**
      *
      */
-    constructor(private localStorageService : LocalStorageService) {
+    constructor(private localStorageService: LocalStorageService) {
     }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
