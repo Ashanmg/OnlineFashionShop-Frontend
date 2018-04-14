@@ -57,4 +57,8 @@ export class UserService {
 
          this.loginResource.next(false);
     }
+
+    userRegister(userdetails) {
+        return this.http.post(environment.apiUrl + 'user/register', userdetails);
+    }
 }
