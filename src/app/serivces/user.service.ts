@@ -55,6 +55,10 @@ export class UserService {
           this.router.navigate(['login']);
          }
 
-        // this.loggedIn = false;
+         this.loginResource.next(false);
+    }
+
+    userRegister(userdetails) {
+        return this.http.post(environment.apiUrl + 'user/register', userdetails);
     }
 }

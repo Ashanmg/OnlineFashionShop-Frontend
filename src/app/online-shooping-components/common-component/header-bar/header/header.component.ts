@@ -26,5 +26,6 @@ export class HeaderComponent implements OnInit {
 
   Logout() {
     console.log('clicked logout');
+    this.userService.logout();
   }
 }

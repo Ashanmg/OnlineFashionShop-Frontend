@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="form-horizontal" role="form" method="POST" action="/register">
+  <form class="form-horizontal" (ngSubmit)="onSubmitRegister(register)" #register="ngForm">
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
@@ -14,7 +14,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Ashan" required autofocus>
+            <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Ashan"
+            required autofocus [(ngModel)]="_userDetails.FirstName">
           </div>
         </div>
       </div>
@@ -26,7 +27,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Madushanka" required autofocus>
+            <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Madushanka"
+            required autofocus [(ngModel)]="_userDetails.LastName">
           </div>
         </div>
       </div>
@@ -38,7 +40,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" name="email" class="form-control" id="email" placeholder="you@example.com" required autofocus>
+            <input type="text" name="email" class="form-control" id="email" placeholder="you@example.com"
+            required autofocus [(ngModel)]="_userDetails.EmailAddress">
           </div>
         </div>
       </div>
@@ -50,7 +53,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" name="username" class="form-control" id="username" placeholder="you@example.com" required autofocus>
+            <input type="text" name="username" class="form-control" id="username" placeholder="you@example.com"
+            required autofocus [(ngModel)]="_userDetails.Username">
           </div>
         </div>
       </div>
@@ -62,7 +66,8 @@
       <div class="col-md-6">
         <div class="form-group has-danger">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password"
+            required autofocus [(ngModel)]="_userDetails.Password">
           </div>
         </div>
       </div>
@@ -93,7 +98,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="number" name="phonenumber" class="form-control" id="phonenumber" placeholder="Phone Number" required>
+            <input type="number" name="phonenumber" class="form-control" id="phonenumber" placeholder="Phone Number"
+            required autofocus [(ngModel)]="_userDetails.ContactNumber">
           </div>
         </div>
       </div>
@@ -105,7 +111,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" name="billaddress1" class="form-control" id="billaddress1" placeholder="No 13/47, Morawagawatta" required>
+            <input type="text" name="billaddress1" class="form-control" id="billaddress1" placeholder="No 13/47, Morawagawatta"
+            required autofocus [(ngModel)]="_userDetails.Address1">
           </div>
         </div>
       </div>
@@ -117,7 +124,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" name="billaddress2" class="form-control" id="billaddress2" placeholder="Sitinamaluwa" required>
+            <input type="text" name="billaddress2" class="form-control" id="billaddress2" placeholder="Sitinamaluwa"
+            required autofocus [(ngModel)]="_userDetails.Address2">
           </div>
         </div>
       </div>
@@ -129,7 +137,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" name="city" class="form-control" id="city" placeholder="Beliatta" required>
+            <input type="text" name="city" class="form-control" id="city" placeholder="Beliatta"
+            required autofocus [(ngModel)]="_userDetails.City">
           </div>
         </div>
       </div>
@@ -141,7 +150,8 @@
       <div class="col-md-6">
         <div class="form-group">
           <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <input type="text" name="postalcode" class="form-control" id="postalcode" placeholder="82400" required>
+            <input type="text" name="postalcode" class="form-control" id="postalcode" placeholder="82400"
+            required autofocus [(ngModel)]="_userDetails.ZipPostalCode">
           </div>
         </div>
       </div>
