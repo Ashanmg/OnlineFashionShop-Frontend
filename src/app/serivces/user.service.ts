@@ -55,6 +55,6 @@ export class UserService {
           this.router.navigate(['login']);
          }
 
-        // this.loggedIn = false;
+         this.loginResource.next(false);
     }
 }
