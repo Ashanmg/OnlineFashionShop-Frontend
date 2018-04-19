@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
+  group = [{Name: 'Formal', isOpen: false, list: [{Id: 1, Name: 'item1'}, {Id: 2, Name: 'item2'}, {Id: 3, Name: 'item3'}]},
+  {Name: 'Casual', isOpen: false, list: [{Id: 4, Name: 'item1'}, {Id: 5, Name: 'item2'}, {Id: 6, Name: 'item3'}]},
+  {Name: 'Sport', isOpen: false, list: [{Id: 7, Name: 'item1'}, {Id: 8, Name: 'item2'}, {Id: 9, Name: 'item3'}]},
+  {Name: 'Child', isOpen: false, list: [{Id: 10, Name: 'item1'}, {Id: 11, Name: 'item2'}, {Id: 12, Name: 'item3'}]}];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onItemClicked(id: any) {
+    console.log('clicked id is :' + id);
+  }
+
+  onCategoryClicked(item: any) {
+    item.isOpen = !item.isOpen;
+  }
 }
