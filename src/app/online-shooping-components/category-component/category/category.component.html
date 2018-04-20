@@ -12,12 +12,16 @@
         <div class="col-12 col-sm-3">
             <div class="card bg-light mb-3">
                 <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
-                <ul class="list-group category_block">
-                    <li class="list-group-item"><a>New arivals</a></li>
-                    <li class="list-group-item"><a>T-Shirt</a></li>
-                    <li class="list-group-item"><a>Trouser</a></li>
-                    <li class="list-group-item"><a>Fancy items</a></li>
-                    <li class="list-group-item"><a>Shoes</a></li>
+                <ul class="list-group category_headerblock" *ngFor="let item of group">
+                    <li class="list-group-item" (click)="onCategoryClicked(item)">
+                        <i class="pull-right fa" [ngClass]="(item.isOpen) ? 'fa-angle-down':'fa-angle-right'"></i>
+                        <a>{{item.Name}}</a>
+                    </li>
+                    <div *ngIf="item.isOpen">
+                        <ul class="list-group category_block" *ngFor="let content of item.list">
+                            <li class="list-group-sub-item" (click)="onItemClicked(content.Id)"><a>{{content.Name}}</a></li>
+                        </ul>
+                    </div>
                 </ul>
             </div>
             <div class="card bg-light mb-3">

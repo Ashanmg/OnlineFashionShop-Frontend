@@ -18,6 +18,9 @@ body, html {
     font-weight: bold;
     font-size: 150%;
 }
+.category_headerblock li {
+    background-color: #e9ecef;
+}
 .category_block li:hover {
     background-color: #007bff;
 }
