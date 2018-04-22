@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <p class="price">99.00 $</p>
                     <p class="price_discounted">149.90 $</p>
-                    <form method="get" action="cart.html">
+                    <form>
                         <div class="form-group">
                             <label for="colors">Color</label>
                             <select class="custom-select" id="colors">
@@ -66,9 +66,11 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-success btn-lg btn-block text-uppercase">
-                            <i class="fa fa-shopping-cart"></i> Add To Cart
-                        </a>
+                        <div [routerLink]="['/cart']">
+                            <a class="btn btn-success btn-lg btn-block text-uppercase">
+                                <i class="fa fa-shopping-cart"></i> Add To Cart
+                            </a>
+                        </div>
                     </form>
                     <div class="product_rassurance">
                         <ul class="list-inline">

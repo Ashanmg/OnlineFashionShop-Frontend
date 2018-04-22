@@ -12,6 +12,26 @@ export class CategoryComponent implements OnInit {
   {Name: 'Sport', isOpen: false, list: [{Id: 7, Name: 'item1'}, {Id: 8, Name: 'item2'}, {Id: 9, Name: 'item3'}]},
   {Name: 'Child', isOpen: false, list: [{Id: 10, Name: 'item1'}, {Id: 11, Name: 'item2'}, {Id: 12, Name: 'item3'}]}];
 
+  products = [
+    // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:quotemark
+    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
+    // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:quotemark
+    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
+        // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:quotemark
+    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
+        // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:quotemark
+    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
+        // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:quotemark
+    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
+        // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:quotemark
+    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'}];
+
   constructor() { }
 
   ngOnInit() {
