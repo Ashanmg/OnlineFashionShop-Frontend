@@ -15,11 +15,11 @@
                 <ul class="list-group category_headerblock" *ngFor="let item of group">
                     <li class="list-group-item" (click)="onCategoryClicked(item)">
                         <i class="pull-right fa" [ngClass]="(item.isOpen) ? 'fa-angle-down':'fa-angle-right'"></i>
-                        <a>{{item.Name}}</a>
+                        <a>{{item.name}}</a>
                     </li>
                     <div *ngIf="item.isOpen">
-                        <ul class="list-group category_block" *ngFor="let content of item.list">
-                            <li class="list-group-sub-item" (click)="onItemClicked(content.Id)"><a>{{content.Name}}</a></li>
+                        <ul class="list-group category_block" *ngFor="let content of item.childProductTypeList">
+                            <li class="list-group-sub-item" (click)="onItemClicked(content.id)"><a>{{content.name}}</a></li>
                         </ul>
                     </div>
                 </ul>
