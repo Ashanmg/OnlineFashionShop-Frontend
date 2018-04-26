@@ -30,6 +30,7 @@ import { FooterComponent } from './online-shooping-components/common-component/f
 import { CartComponent } from './online-shooping-components/cart-component/cart/cart.component';
 import { BreadcrumbsComponent } from './online-shooping-components/common-component/breadcrumbs/breadcrumbs.component';
 import { MaintenanceComponent } from './online-shooping-components/common-component/maintenance/maintenance.component';
+import { ProductService } from './serivces/product.service';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { MaintenanceComponent } from './online-shooping-components/common-compon
       provide: HTTP_INTERCEPTORS,
       useClass: TokenGenrator,
       multi: true
-    }
+    },
+    ProductService
   ],
   bootstrap: [AppComponent]
 })

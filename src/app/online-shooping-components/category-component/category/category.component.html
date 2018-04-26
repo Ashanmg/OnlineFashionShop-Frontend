@@ -15,11 +15,11 @@
                 <ul class="list-group category_headerblock" *ngFor="let item of group">
                     <li class="list-group-item" (click)="onCategoryClicked(item)">
                         <i class="pull-right fa" [ngClass]="(item.isOpen) ? 'fa-angle-down':'fa-angle-right'"></i>
-                        <a>{{item.Name}}</a>
+                        <a>{{item.name}}</a>
                     </li>
                     <div *ngIf="item.isOpen">
-                        <ul class="list-group category_block" *ngFor="let content of item.list">
-                            <li class="list-group-sub-item" (click)="onItemClicked(content.Id)"><a>{{content.Name}}</a></li>
+                        <ul class="list-group category_block" *ngFor="let content of item.childProductTypeList">
+                            <li class="list-group-sub-item" (click)="onItemClicked(content.id)"><a>{{content.name}}</a></li>
                         </ul>
                     </div>
                 </ul>
@@ -36,24 +36,24 @@
         </div>
         <div class="col">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of products">
                     <div class="card">
                         <img class="card-img-top" src="../../../../assets/images/category-empty.png" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a [routerLink]="['/product']" title="View Product">Product title</a></h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h4 class="card-title"><a [routerLink]="['/product']" title="View Product">{{product.Title}}</a></h4>
+                            <p class="card-text">{{product.Description}}</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                    <p class="btn btn-danger btn-block">{{product.Price}}</p>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
+                                    <a [routerLink]="['/cart']" class="btn btn-success btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <img class="card-img-top" src="../../../../assets/images/category-empty.png" alt="Card image cap">
                         <div class="card-body">
@@ -137,7 +137,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-12">
                     <nav aria-label="...">
                         <ul class="pagination">
