@@ -52,6 +52,7 @@ export class CategoryComponent implements OnInit {
         console.log(data);
         if (data['parentList']) {
           this.group = data['parentList'];
+          this.products = data['productList'];
         }
       },
       err => {
