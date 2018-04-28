@@ -1,7 +1,7 @@
 <section class="jumbotron text-center">
     <div class="container">
-        <h1 class="jumbotron-heading">PRODUCT NAME - VARIENT</h1>
-        <p class="lead text-muted mb-0">New up coming brand with lowest cost. Materials are soft and easy to wear nothing like this...</p>
+        <h1 class="jumbotron-heading">{{productDetails.name}} - VARIENT</h1>
+        <p class="lead text-muted mb-0">{{productDetails.shortDescription}}</p>
     </div>
 </section>
 <app-breadcrumbs [breadcrumbItems] = "[{name:'Home', url:'/home'},
@@ -15,7 +15,7 @@
             <div class="card bg-light mb-3">
                 <div class="card-body">
                     <a href="" data-toggle="modal" data-target="#productModal">
-                        <img class="img-fluid" src="../../../../assets/images/product-empty.png" />
+                        <img class="img-fluid" src="../../../../assets/images/Image{{productDetails.pictureId - 10}}.png" />
                         <p class="text-center">Zoom</p>
                     </a>
                 </div>
@@ -26,7 +26,7 @@
         <div class="col-12 col-lg-6 add_to_cart_block">
             <div class="card bg-light mb-3">
                 <div class="card-body">
-                    <p class="price">99.00 $</p>
+                    <p class="price">{{productDetails.price}} $</p>
                     <p class="price_discounted">149.90 $</p>
                     <form>
                         <div class="form-group">
@@ -80,13 +80,13 @@
                         </ul>
                     </div>
                     <div class="reviews_product p-3 mb-2 ">
-                        3 reviews
+                        {{productDetails.approvedTotalReview}} reviews
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        (4/5)
+                        ({{productDetails.approvedRatingSum}}/5)
                         <a class="pull-right" href="#reviews">View all reviews</a>
                     </div>
                     <div class="datasheet p-3 mb-2 bg-info text-white">

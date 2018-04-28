@@ -40,11 +40,11 @@
                     <div class="card">
                         <img class="card-img-top" src="../../../../assets/images/Image{{product.pictureId-10}}.png" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title"><a [routerLink]="['/product']" title="View Product">{{product.name}}</a></h4>
+                            <h4 class="card-title"><a [routerLink]="['/product']" [queryParams]="{ productId: product.id }" title="View Product">{{product.name}}</a></h4>
                             <p class="card-text">{{product.shortDescription}}</p>
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">{{product.price}}</p>
+                                    <p class="btn btn-danger btn-block">{{product.price}} $</p>
                                 </div>
                                 <div class="col">
                                     <a [routerLink]="['/cart']" class="btn btn-success btn-block">Add to cart</a>
