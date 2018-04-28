@@ -9,27 +9,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class CategoryComponent implements OnInit {
 
-  group = [];
-
-  products = [
-    // tslint:disable-next-line:max-line-length
-    // tslint:disable-next-line:quotemark
-    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
-    // tslint:disable-next-line:max-line-length
-    // tslint:disable-next-line:quotemark
-    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
-        // tslint:disable-next-line:max-line-length
-    // tslint:disable-next-line:quotemark
-    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
-        // tslint:disable-next-line:max-line-length
-    // tslint:disable-next-line:quotemark
-    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
-        // tslint:disable-next-line:max-line-length
-    // tslint:disable-next-line:quotemark
-    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'},
-        // tslint:disable-next-line:max-line-length
-    // tslint:disable-next-line:quotemark
-    {Title: 'Product title', Description: "Some quick example text to build on the card title and make up the bulk of the card's content.", Price: '99.00 $'}];
+  group: any;
+  products: any;
 
   constructor(private productService: ProductService,
               private toastrService: ToastrService) { }

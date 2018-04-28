@@ -15,4 +15,9 @@ export class ProductService {
         return this.http.get(environment.apiUrl + 'product/category');
     }
 
+    getProductDetails(productId) {
+        return this.http.get(environment.apiUrl + 'product/singleproduct'
+            , {params : {id: productId}});
+    }
+
 }
