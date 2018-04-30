@@ -31,6 +31,7 @@ import { CartComponent } from './online-shooping-components/cart-component/cart/
 import { BreadcrumbsComponent } from './online-shooping-components/common-component/breadcrumbs/breadcrumbs.component';
 import { MaintenanceComponent } from './online-shooping-components/common-component/maintenance/maintenance.component';
 import { ProductService } from './serivces/product.service';
+import { PaginationComponent } from './online-shooping-components/common-component/pagination/pagination.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ProductService } from './serivces/product.service';
     FooterComponent,
     CartComponent,
     BreadcrumbsComponent,
-    MaintenanceComponent
+    MaintenanceComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
