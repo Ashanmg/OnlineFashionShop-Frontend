@@ -23,7 +23,7 @@ const routes: Routes = [
     { path: 'product', component: ProductComponent},
     { path: 'categories', component: CategoryComponent},
     { path: 'cart', component: CartComponent, canActivate : [AuthenticateGuard]},
-    { path: 'myaccount', component: MaintenanceComponent}
+    { path: 'myaccount', component: MaintenanceComponent, canActivate : [AuthenticateGuard]}
 ];
 
 @NgModule({
