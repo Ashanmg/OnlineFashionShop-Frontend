@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
 
   queryParams: any;
   productDetails: ProductDetail;
+  quantity = 1;
 
   constructor(private productService: ProductService,
     private toastrService: ToastrService,
@@ -47,6 +48,20 @@ export class ProductComponent implements OnInit {
         this.toastrService.error('Unexpected error happened');
       }
     );
+  }
+
+  minusClicked() {
+    console.log(this.quantity);
+    if (this.quantity > 1) {
+      this.quantity = this.quantity - 1;
+    }
+  }
+
+  plusClicked() {
+    console.log(this.quantity);
+    if (this.quantity < 100) {
+      this.quantity = this.quantity + 1;
+    }
   }
 
 }
