@@ -20,6 +20,8 @@ import { AuthenticateGuard } from './guards/authenticate.guard';
 import { TokenGenrator } from './serivces/token.generator';
 import { UserService } from './serivces/user.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ProductService } from './serivces/product.service';
+import { ShoppingCartService } from './serivces/cart.service';
 
 // Routing Module
 import { AppRoutingModule } from './ng-modules/app-routing.module';
@@ -30,7 +32,6 @@ import { FooterComponent } from './online-shooping-components/common-component/f
 import { CartComponent } from './online-shooping-components/cart-component/cart/cart.component';
 import { BreadcrumbsComponent } from './online-shooping-components/common-component/breadcrumbs/breadcrumbs.component';
 import { MaintenanceComponent } from './online-shooping-components/common-component/maintenance/maintenance.component';
-import { ProductService } from './serivces/product.service';
 import { PaginationComponent } from './online-shooping-components/common-component/pagination/pagination.component';
 
 
@@ -76,7 +77,8 @@ import { PaginationComponent } from './online-shooping-components/common-compone
       useClass: TokenGenrator,
       multi: true
     },
-    ProductService
+    ProductService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
