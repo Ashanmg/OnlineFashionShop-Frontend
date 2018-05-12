@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "selenium-webdriver/http";
 import { LocalStorageService } from "angular-2-local-storage";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable()
 export class ShoppingCartService {
@@ -18,7 +18,7 @@ export class ShoppingCartService {
     }
 
     addToCartDetails() {
-        
+
     }
 
 }
