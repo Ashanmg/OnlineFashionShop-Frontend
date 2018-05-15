@@ -25,7 +25,7 @@ export class UserService {
         // save token to local storage
         this.loginResource.next(true);
         this.localStorageService.set('token', token);
-        const datetimeNow: number = new Date().getTime() / 1000 + token['expires_in'];
+        const datetimeNow: number = new Date().getTime() / 1000 ;
         this.localStorageService.set('tokenLifeTime', datetimeNow);
     }
 
