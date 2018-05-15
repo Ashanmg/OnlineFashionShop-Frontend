@@ -17,13 +17,34 @@ export class TokenGenrator implements HttpInterceptor {
     }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        if (this.localStorageService.get('token') !== null) {
-          request = request.clone({
-            setHeaders: {
-              Authorization: `Bearer ${this.localStorageService.get('token')['access_token']}`
-            }
-          });
+        // if (this.localStorageService.get('my-app.token') !== null) {
+        //   request = request.clone({
+        //     setHeaders: {
+        //       Authorization: 'Bearer' + this.localStorageService.get('my-app.token')
+        //     }
+        //   });
+        // }
+        // return next.handle(request);
+
+        const idToken = localStorage.getItem("my-app.token");
+        console.log(idToken);
+
+        if (idToken) {
+            const cloned = request.clone({
+                headers: request.headers.set("Authorization",
+                    `Bearer ${idToken}`)
+            });
+
+            return next.handle(cloned);
         }
-        return next.handle(request);
+        else {
+            // return next.handle(request);
+            const cloned = request.clone({
+              headers: request.headers.set("Authorization",
+                  "Bearer " + "this is testing for set this header for all request")
+            });
+
+            return next.handle(cloned);
+        }
       }
 }
