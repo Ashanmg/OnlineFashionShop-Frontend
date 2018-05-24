@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of products">
                     <div class="card">
-                        <img class="card-img-top" src="../../../../assets/images/Image{{product.pictureId-10}}.png" alt="Card image cap">
+                        <img class="card-img-top" src="../../../../assets/images/Image{{product.pictureId}}.png" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title"><a [routerLink]="['/product']" [queryParams]="{ productId: product.id }" title="View Product">{{product.name}}</a></h4>
                             <p class="card-text">{{product.shortDescription}}</p>

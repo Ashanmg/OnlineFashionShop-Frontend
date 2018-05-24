@@ -14,14 +14,14 @@
           </li>
       </ul> -->
       <ul class="pagination">
-        <li class="page-item"><a class="page-link font-weight-bold" *ngIf="_page != 0" (click)="search(0)"><<</a></li>
-        <li class="page-item"><a class="page-link font-weight-bold" *ngIf="_page != 0" (click)="search(_page-1)"><</a></li>
+        <li class="page-item"><a class="page-link font-weight-bold" *ngIf="page != 0" (click)="search(0)"><<</a></li>
+        <li class="page-item"><a class="page-link font-weight-bold" *ngIf="page != 0" (click)="search(page-1)"><</a></li>
         <li class="page-item" *ngFor="let n of range()" [ngClass]="{active: n == page}">
-            <a class="page-link" (click)="search(n)" *ngIf="n != _page">{{n+1}}</a>
-            <span *ngIf="n == _page">{{n+1}}</span>
+            <a class="page-link" (click)="search(n)" *ngIf="n != page">{{n+1}}</a>
+            <span *ngIf="n == page">{{n+1}}</span>
         </li>
-        <li class="page-item"><a class="page-link font-weight-bold" *ngIf="_page != (_pagesCount - 1)" (click)="search(pagePlus(1))">></a></li>
-        <li class="page-item"><a class="page-link font-weight-bold" *ngIf="_page != (_pagesCount - 1)" (click)="search(_pagesCount - 1)">>></a></li>
+        <li class="page-item"><a class="page-link font-weight-bold" *ngIf="page != (pagesCount - 1)" (click)="search(pagePlus(1))">></a></li>
+        <li class="page-item"><a class="page-link font-weight-bold" *ngIf="page != (pagesCount - 1)" (click)="search(pagesCount - 1)">>></a></li>
        </ul>
   </nav>
 </div>
