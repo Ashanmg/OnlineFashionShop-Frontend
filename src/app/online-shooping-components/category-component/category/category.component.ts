@@ -25,6 +25,7 @@ export class CategoryComponent implements OnInit {
 
   onCategoryClicked(item: any) {
     item.isOpen = !item.isOpen;
+    console.log(item.isOpen);
   }
 
   getProductTypesWithCategoryShowProduct() {

@@ -12,7 +12,7 @@ import { ProductDetail } from '../../../models/product_detail';
 export class ProductComponent implements OnInit {
 
   queryParams: any;
-  productDetails: ProductDetail;
+  productDetails: any;
   quantity = 1;
 
   constructor(private productService: ProductService,
