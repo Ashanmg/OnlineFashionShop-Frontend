@@ -47,7 +47,7 @@
                                     <p class="btn btn-danger btn-block">{{product.price}} $</p>
                                 </div>
                                 <div class="col">
-                                    <a [routerLink]="['/cart']" class="btn btn-success btn-block">Add to cart</a>
+                                    <a (click)="addToCart(product)" class="btn btn-success btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>

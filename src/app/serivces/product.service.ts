@@ -20,4 +20,8 @@ export class ProductService {
             , {params : {id: productId}});
     }
 
+    isVariantProduct(productId) {
+        return this.http.get(environment.apiUrl + 'product/checkvariant'
+            , {params : {productId: productId}});
+    }
 }
