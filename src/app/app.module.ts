@@ -33,6 +33,7 @@ import { CartComponent } from './online-shooping-components/cart-component/cart/
 import { BreadcrumbsComponent } from './online-shooping-components/common-component/breadcrumbs/breadcrumbs.component';
 import { MaintenanceComponent } from './online-shooping-components/common-component/maintenance/maintenance.component';
 import { PaginationComponent } from './online-shooping-components/common-component/pagination/pagination.component';
+import { CheckoutComponent } from './online-shooping-components/checkout-component/checkout/checkout.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { PaginationComponent } from './online-shooping-components/common-compone
     CartComponent,
     BreadcrumbsComponent,
     MaintenanceComponent,
-    PaginationComponent
+    PaginationComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
