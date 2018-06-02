@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit {
   queryParams: any;
   productDetails: any;
   quantity = 1;
+  colourAttributes: any;
 
   constructor(private productService: ProductService,
     private toastrService: ToastrService,
@@ -39,7 +40,10 @@ export class ProductComponent implements OnInit {
       (data) => {
         console.log(data);
         if (data) {
-          this.productDetails = data['result'];
+          this.productDetails = data['singleProduct'];
+          if (data['attributeValue']) {
+            this.colourAttributes = [{'id': '1', 'name': 'Black'}, {'id': '2', 'name': 'White'}, {'id': '3', 'name': 'Blue'}];
+          }
         } else {
           this.toastrService.warning('Product is not available. Check again');
         }
@@ -62,6 +66,10 @@ export class ProductComponent implements OnInit {
     if (this.quantity < 100) {
       this.quantity = this.quantity + 1;
     }
+  }
+
+  fiteredColour(id) {
+    console.log(id);
   }
 
 }
