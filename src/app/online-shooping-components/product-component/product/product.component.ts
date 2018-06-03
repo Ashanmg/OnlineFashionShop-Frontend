@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../serivces/product.service';
 import { ToastrService } from 'ngx-toastr';
 import { ProductDetail } from '../../../models/product_detail';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-product',
@@ -14,7 +15,8 @@ export class ProductComponent implements OnInit {
   queryParams: any;
   productDetails: any;
   quantity = 1;
-  colourAttributes: any;
+  colourAttributes = [];
+  sizeAttributes = [];
 
   constructor(private productService: ProductService,
     private toastrService: ToastrService,
@@ -41,9 +43,16 @@ export class ProductComponent implements OnInit {
         console.log(data);
         if (data) {
           this.productDetails = data['singleProduct'];
-          if (data['attributeValue']) {
-            this.colourAttributes = [{'id': '1', 'name': 'Black'}, {'id': '2', 'name': 'White'}, {'id': '3', 'name': 'Blue'}];
+          const attributeValues = data['attributeValue'];
+          for (let i = 0; i < attributeValues.length; i++) {
+            if (attributeValues[i].productAttributeId === 1) {
+              this.colourAttributes.push(attributeValues[i]);
+            }else if (attributeValues[i].productAttributeId === 2) {
+              this.sizeAttributes.push(attributeValues[i]);
+            }
           }
+          // this.colourAttributes.sort();
+          console.log(this.colourAttributes);
         } else {
           this.toastrService.warning('Product is not available. Check again');
         }
@@ -69,6 +78,10 @@ export class ProductComponent implements OnInit {
   }
 
   fiteredColour(id) {
+    console.log(id);
+  }
+
+  filteredSize (id) {
     console.log(id);
   }
 

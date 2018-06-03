@@ -35,20 +35,18 @@
                             class="custom-select" 
                             id="colors"
                             (change)="fiteredColour($event.target.value)">
-                                <option value="0">Select</option>
-                                <option *ngFor="let item of colourAttributes" value={{item.id}}>{{item.name}}</option>
+                                <option selected value="0">Select</option>
+                                <option *ngFor="let item of colourAttributes" value={{item.id}}>{{item.productValue}}</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="sizes">Size</label>
-                            <select class="custom-select" id="sizes">
-                                <option selected>Select</option>
-                                <option value="3">XS</option>
-                                <option value="1">S</option>
-                                <option value="2">M</option>
-                                <option value="3">L</option>
-                                <option value="3">XL</option>
-                                <option value="3">XXL</option>
+                            <select 
+                             class="custom-select"
+                             id="sizes"
+                             (change)="filteredSize($event.target.value)">
+                                <option selected value="0">Select</option>
+                                <option *ngFor="let item of sizeAttributes" value={{item.id}}>{{item.productValue}}</option>
                             </select>
                         </div>
                         <div class="form-group">
