@@ -34,6 +34,7 @@
                             <select 
                             class="custom-select" 
                             id="colors"
+                            required
                             (change)="fiteredColour($event.target.value)">
                                 <option selected value="0">Select</option>
                                 <option *ngFor="let item of colourAttributes" value={{item.id}}>{{item.productValue}}</option>
@@ -44,6 +45,7 @@
                             <select 
                              class="custom-select"
                              id="sizes"
+                             required
                              (change)="filteredSize($event.target.value)">
                                 <option selected value="0">Select</option>
                                 <option *ngFor="let item of sizeAttributes" value={{item.id}}>{{item.productValue}}</option>
@@ -65,8 +67,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div [routerLink]="['/cart']">
-                            <a class="btn btn-success btn-lg btn-block text-uppercase">
+                        <div>
+                            <a class="btn btn-success btn-lg btn-block text-uppercase" (click)="addToCartClicked()">
                                 <i class="fa fa-shopping-cart"></i> Add To Cart
                             </a>
                         </div>
