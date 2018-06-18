@@ -26,22 +26,21 @@ export class TokenGenrator implements HttpInterceptor {
         // }
         // return next.handle(request);
 
-        const idToken = localStorage.getItem("my-app.token");
+        const idToken = localStorage.getItem('my-app.token');
         console.log(idToken);
 
         if (idToken) {
             const cloned = request.clone({
-                headers: request.headers.set("Authorization",
+                headers: request.headers.set('Authorization',
                     `Bearer ${idToken}`)
             });
 
             return next.handle(cloned);
-        }
-        else {
+        } else {
             // return next.handle(request);
             const cloned = request.clone({
-              headers: request.headers.set("Authorization",
-                  "Bearer " + "this is testing for set this header for all request")
+              headers: request.headers.set('Authorization',
+                  'Bearer ' + 'this is testing for set this header for all request')
             });
 
             return next.handle(cloned);

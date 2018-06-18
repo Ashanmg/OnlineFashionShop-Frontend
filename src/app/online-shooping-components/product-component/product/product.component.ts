@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../serivces/product.service';
 import { ToastrService } from 'ngx-toastr';
@@ -20,7 +20,8 @@ export class ProductComponent implements OnInit {
 
   constructor(private productService: ProductService,
     private toastrService: ToastrService,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private router: Router) {
       this.productDetails = new  ProductDetail(0, 0, 0, '', 0, null, 0, 'PRODUCT_NAME', null, 0, 99.99, null, 0, '', 0, 0);
     }
 
@@ -85,4 +86,13 @@ export class ProductComponent implements OnInit {
     console.log(id);
   }
 
+  addToCartClicked() {
+    const idToken = localStorage.getItem('my-app.token');
+    console.log('add to cart clicked');
+    if (idToken) {
+      console.log(idToken);
+    }else {
+      this.router.navigate(['/login']);
+    }
+  }
 }
