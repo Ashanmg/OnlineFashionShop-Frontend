@@ -14,3 +14,7 @@ h2 {
   color: white;
   text-align: center;
 }
+
+.alert {
+  padding: 0;
+}
