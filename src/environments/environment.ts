@@ -5,5 +5,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://online-web-api-dev.ap-southeast-1.elasticbeanstalk.com/api/'
+  // apiUrl: 'http://online-web-api-dev.ap-southeast-1.elasticbeanstalk.com/api/'
+  // apiUrl: 'http://192.168.8.101:1862/api/'
+  apiUrl: '  http://localhost:1865/api/'
+
 };

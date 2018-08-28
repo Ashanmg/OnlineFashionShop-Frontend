@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pagination',
@@ -9,8 +9,8 @@ export class PaginationComponent implements OnInit {
 
   public page = 3;
   public pagesCount = 6;
-  public totalCount = 22;
-
+    //   public totalCount = 22;
+  @Input() totalCount: number;
   constructor() {
   }
 
@@ -18,6 +18,7 @@ export class PaginationComponent implements OnInit {
   }
 
   range(): Array<any> {
+      console.log(this.totalCount);
       if (!this.pagesCount) { return []; }
       const step = 2;
       const doubleStep = step * 2;

@@ -12,6 +12,7 @@ export class CategoryComponent implements OnInit {
 
   group: any;
   products: any;
+  totalCount: number;
 
   constructor(private productService: ProductService,
               private toastrService: ToastrService,
@@ -19,6 +20,7 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit() {
     this.getProductTypesWithCategoryShowProduct();
+
   }
 
   onItemClicked(id: any) {
@@ -33,7 +35,7 @@ export class CategoryComponent implements OnInit {
   getProductTypesWithCategoryShowProduct() {
     this.productService.getCategoryDetails().subscribe(
       (data) => {
-        console.log(data);
+        this.totalCount = data['productList'].length;
         if (data['parentList']) {
           this.group = data['parentList'];
           this.products = data['productList'];
